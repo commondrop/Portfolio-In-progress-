@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg: hsl(0,0%, 5%);
+    --col-bg: hsl(0,0%, 10%);
+    --col-outline: hsl(0,0%, 25%);
+    --gray: #666;
+}
+body{
+    background-color: var(--bg);
+    min-height: 100vh;
+    font-family: 'Rubik';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper{
+    
+    width: 1200px;
+    height:800px;
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+}
+.row{
+    
+    border-radius: 1em;
+}
+.row-1{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    
+}
+.row-2{
+    flex: 1;
+    display: flex;
+}
+.col{
+    
+    flex:1;
+    border-radius: 1em;
+    display: flex;
+    gap:1em;
+}
+.col.col-2{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.col-box{
+    outline: 2px solid var(--col-outline);
+    flex:1;
+    border-radius: 1em;
+    background: var(--col-bg);
+    padding: 1.5rem;
+}
+.col-box:hover{
+    outline: 2px solid #c97f7f;
+}
+.row-2.col.col-box{
+    display: flex;
+    flex-direction: column;
+}
+.box1{
+    display: flex;
+    height: 500px;
+}
+.box2{
+    display: flex;
+    height: 300px;
+}
+h6{
+    font-size: 1em;
+    color: var(--gray);
+}
+span{
+    color: #fff;
+    font-size: 1.5em;
+}
+span b{
+    color:#c97f7f;
+}
+bold{
+    font-weight: bold;
+}
+.colors{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.color{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.color.red{
+    background: #c97f7f;
+    box-shadow: 0 0px 10px #c97f7f;
+}
+.color.yellow{
+    background: #FDFBD4;
+    box-shadow: 0 0px 10px #FDFBD4;
+}
+.color.blue{
+    background: #90e0ef;
+    box-shadow: 0 0px 10px #90e0ef;
+}
+.color.purple{
+    background: #bb99f3;
+    box-shadow: 0 0px 10px #bb99f3;
+}
+.col-box:hover.red{
+    outline: 2px solid #c97f7f;
+}
+.col-box:hover.yellow{
+    outline: 2px solid #FDFBD4;
+}
+.col-box:hover.blue{
+    outline: 2px solid #90e0ef;
+}
+.col-box:hover.purple{
+    outline: 2px solid #bb99f3;
+}
+.colortext.red{
+    color:#c97f7f;
+}
+.colortext.yellow{
+    color: #FDFBD4;
+}
+.colortext.blue{
+    color: #90e0ef;
+}
+.colortext.purple{
+    color: #bb99f3;
+}
+.buttons{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    bottom: 0;
+    margin-top: 100px;
+}
+.button{
+    width: 80px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    outline: 1px solid #c97f7f;
+    box-shadow: 4px 4px #c97f7f;
+    background: hsl(0,0%, 5%);
+    cursor: pointer;
+    margin-right: 15px;
+    bottom: 0;
+}
+.button svg{
+    fill: white;
+    width: 50px;
+    height: 30px;
+}
+.button.red{
+    outline: 1px solid #c97f7f;
+    box-shadow: 4px 4px #c97f7f;
+}
+.button.yellow{
+    outline: 1px solid #FDFBD4;
+    box-shadow: 4px 4px #FDFBD4;
+}
+.button.blue{
+    outline: 1px solid #90e0ef;
+    box-shadow: 4px 4px #90e0ef;
+}
+.button.purple{
+    outline: 1px solid #bb99f3;
+    box-shadow: 4px 4px #bb99f3;
+}
+.button:active{
+    box-shadow: none;
+    fill:#c97f7f;
+    transform: translate(4px, 4px);
+    transition: .1s;
+}
+.button:hover{
+    fill:#c97f7f;
+    
+}
+.button:hover .svg{
+    fill:#c97f7f; 
+}
+.button:hover.red .svg{
+    fill:#c97f7f; 
+}
+.button:hover.yellow .svg{
+    fill: #FDFBD4;  
+}
+.button:hover.blue .svg{
+    fill: #90e0ef;  
+}
+.button:hover.purple .svg{
+    fill: #bb99f3;  
+}
+.emoji{
+    user-select: none;
+}
+.container {
+    position: relative;
+    display: inline-block;
+}
+.textbox {
+    position: absolute;
+    bottom: 100%; /* Position it above the emoji button */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-60%); /* Center it precisely */
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 4px 4px #c97f7f;
+    background: hsl(0,0%, 5%);
+    border: 2px solid #c97f7f;
+    border-radius: 5px;
+    visibility: hidden; /* Hidden by default */
+    display: none;
+    width: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    user-select: none;
+    z-index: 10;
+}
+.textbox.red{
+    box-shadow: 4px 4px #c97f7f;
+    border: 2px solid #c97f7f;
+}
+.textbox.yellow{
+    box-shadow: 4px 4px #FDFBD4;
+    border: 2px solid #FDFBD4; 
+}
+.textbox.blue{
+    box-shadow: 4px 4px #90e0ef;
+    border: 2px solid #90e0ef;
+}
+.textbox.purple{
+    box-shadow: 4px 4px #bb99f3;
+    border: 2px solid #bb99f3;
+}
+
+/* Show the text box when hovering over the emoji button */
+.emojibtn:hover + .textbox {
+    visibility: visible;
+    display: block;
+     /* Make the text box visible */
+    
+}
+
+
+@media (max-width: 768px) {
+    /* Stack .row-2 under .row-1 */
+    .wrapper {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .row-1 {
+        flex: 1;
+        display: block; /* Stack vertically */
+    }
+
+    .row-2 {
+        flex: 1;
+        display: block; /* Stack vertically */
+        margin-top: 20px;
+    }
+
+    .col-2 {
+        /* Move .col-2 underneath .row-2 */
+        order: 2; /* Ensure .col-2 appears below */
+        margin-top: 20px; /* Add spacing between rows */
+    }
+
+    .col {
+        flex: 1;
+        padding: 0.5em;
+    }
+
+    .colors {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .color {
+        width: 40px;
+        height: 40px;
+    }
+
+    .buttons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .button {
+        width: 60px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .textbox {
+        width: 80px;
+    }
+}
+
+/* Responsive Design for Small Mobile */
+@media (max-width: 480px) {
+    h6 {
+        font-size: 1em;
+    }
+
+    span {
+        font-size: 1.2em;
+    }
+
+    .button {
+        width: 50px;
+        height: 35px;
+    }
+
+    .button svg {
+        width: 30px;
+        height: 20px;
+    }
+}
+/* Hovering over col-box or its descendants should not trigger a hover effect on the emoji button */
+.col-box:hover {
+    z-index: 0; /* Reset z-index for normal hover */
+}
+
+.col-2, .row-2 {
+    z-index: 1; /* Ensure col-2 and row-2 have default stacking */
+}
+
+.emojibtn {
+    z-index: 2; /* Ensure the emoji button is above the other content */
+}
+
+/* Optional: Add a higher z-index to make the textbox above any other elements */
+.textbox.red, .textbox.yellow, .textbox.blue, .textbox.purple {
+    z-index: 10; /* Ensure the textbox appears on top */
+}
+.extend{
+    display: flex;
+    height: 100px;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+.extend.extended{
+    height: 500px;
+}
